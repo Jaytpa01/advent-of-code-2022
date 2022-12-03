@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"github.com/Jaytpa01/advent-of-code-2022/one"
-	"github.com/Jaytpa01/advent-of-code-2022/three"
-	"github.com/Jaytpa01/advent-of-code-2022/two"
+	one "github.com/Jaytpa01/advent-of-code-2022/1"
+	two "github.com/Jaytpa01/advent-of-code-2022/2"
+	three "github.com/Jaytpa01/advent-of-code-2022/3"
 )
 
 /*

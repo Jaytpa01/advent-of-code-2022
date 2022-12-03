@@ -8,7 +8,7 @@ import (
 )
 
 func B() int {
-	strategyGuide := utils.OpenInputFile("./two/input.txt")
+	strategyGuide := utils.OpenInputFile("./2/input.txt")
 
 	rounds := strings.Split(strategyGuide, "\n")
 

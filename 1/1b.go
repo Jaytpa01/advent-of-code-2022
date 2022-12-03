@@ -21,7 +21,7 @@ then the fifth Elf (with 10000 Calories). The sum of the Calories carried by the
 Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in total?
 */
 func OneB() int {
-	inputBytes, err := os.ReadFile("./one/input.txt")
+	inputBytes, err := os.ReadFile("./1/input.txt")
 	if err != nil {
 		log.Fatalf("failed to read file: %v", err)
 	}

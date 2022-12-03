@@ -41,8 +41,8 @@ Find the item type that corresponds to the badges of each three-Elf group. What
 is the sum of the priorities of those item types?
 */
 func B() int {
-	scanner := utils.NewFileScanner("./three/input.txt")
-	// scanner := utils.NewFileScanner("./three/sample.txt")
+	scanner := utils.NewFileScanner("./3/input.txt")
+	// scanner := utils.NewFileScanner("./3/sample.txt")
 	defer scanner.Close()
 
 	totalPriority := 0

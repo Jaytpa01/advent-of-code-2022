@@ -54,7 +54,7 @@ Calories are being carried by the Elf carrying the most Calories. In the example
 Find the Elf carrying the most Calories. How many total Calories is that Elf carrying?
 */
 func OneA() int {
-	inputBytes, err := os.ReadFile("./one/input.txt")
+	inputBytes, err := os.ReadFile("./1/input.txt")
 	if err != nil {
 		log.Fatalf("failed to read file: %v", err)
 	}

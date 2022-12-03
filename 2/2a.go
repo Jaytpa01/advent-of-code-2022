@@ -50,7 +50,7 @@ const (
 )
 
 func A() int {
-	strategyGuide := utils.OpenInputFile("./two/input.txt")
+	strategyGuide := utils.OpenInputFile("./2/input.txt")
 
 	// strategyGuide := "A Y\nB X\nC Z"
 
