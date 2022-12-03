@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 
+	"github.com/Jaytpa01/advent-of-code-2022/one"
+	"github.com/Jaytpa01/advent-of-code-2022/three"
 	"github.com/Jaytpa01/advent-of-code-2022/two"
 )
 
@@ -21,10 +23,13 @@ Now that you're correctly decrypting the ultra top secret strategy guide, you wo
 Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide?
 */
 func main() {
-	// fmt.Printf("Answer for Problem 1A: %d\n", one.OneA())
-	// fmt.Printf("Answer for Problem 1B: %d\n", one.OneB())
+	fmt.Printf("Answer for Problem 1A: %d\n", one.OneA())
+	fmt.Printf("Answer for Problem 1B: %d\n", one.OneB())
 
 	fmt.Printf("Answer for Problem 2A: %d\n", two.A())
 	fmt.Printf("Answer for Problem 2B: %d\n", two.B())
+
+	fmt.Printf("Answer for Problem 3A: %v\n", three.A())
+	fmt.Printf("Answer for Problem 3B: %v\n", three.B())
 
 }
