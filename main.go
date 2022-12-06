@@ -27,21 +27,21 @@ Following the Elf's instructions for the second column, what would your total sc
 */
 func main() {
 	fmt.Printf("Answer for Problem 1A: %d\n", one.OneA())
-	fmt.Printf("Answer for Problem 1B: %d\n", one.OneB())
+	fmt.Printf("Answer for Problem 1B: %d\n\n", one.OneB())
 
 	fmt.Printf("Answer for Problem 2A: %d\n", two.A())
-	fmt.Printf("Answer for Problem 2B: %d\n", two.B())
+	fmt.Printf("Answer for Problem 2B: %d\n\n", two.B())
 
 	fmt.Printf("Answer for Problem 3A: %v\n", three.A())
-	fmt.Printf("Answer for Problem 3B: %v\n", three.B())
+	fmt.Printf("Answer for Problem 3B: %v\n\n", three.B())
 
 	fmt.Printf("Answer for Problem 4A: %v\n", four.A())
-	fmt.Printf("Answer for Problem 4B: %v\n", four.B())
+	fmt.Printf("Answer for Problem 4B: %v\n\n", four.B())
 
 	fmt.Printf("Answer for Problem 5A: %v\n", five.A())
-	fmt.Printf("Answer for Problem 5B: %v\n", five.B())
+	fmt.Printf("Answer for Problem 5B: %v\n\n", five.B())
 
 	fmt.Printf("Answer for Problem 6A: %v\n", six.A())
-	fmt.Printf("Answer for Problem 6B: %v\n", six.B())
+	fmt.Printf("Answer for Problem 6B: %v\n\n", six.B())
 
 }
