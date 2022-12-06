@@ -1,9 +1,9 @@
 package five
 
 import (
-	"fmt"
 	"regexp"
 	"strconv"
+	"strings"
 
 	"github.com/Jaytpa01/advent-of-code-2022/utils"
 )
@@ -82,31 +82,17 @@ After the rearrangement procedure completes, what crate ends up on top of each s
 //	1   2   3
 func A() string {
 
-	reg := regexp.MustCompile(`(\d{1}) from (\d{1}) to (\d{1})`)
+	reg := regexp.MustCompile(`(\d*) from (\d*) to (\d*)`)
 
-	stack1 := &stack{"D", "T", "W", "F", "J", "S", "H", "N"}
-	stack2 := &stack{"H", "R", "P", "Q", "T", "N", "B", "G"}
-	stack3 := &stack{"L", "Q", "V"}
-	stack4 := &stack{"N", "B", "S", "W", "R", "Q"}
-	stack5 := &stack{"N", "D", "F", "T", "V", "M", "B"}
-	stack6 := &stack{"M", "D", "B", "V", "H", "T", "R"}
-	stack7 := &stack{"D", "B", "Q", "J"}
-	stack8 := &stack{"D", "N", "J", "V", "R", "Z", "H", "Q"}
-	stack9 := &stack{"B", "N", "H", "M", "S"}
-	stacks := []*stack{stack1, stack2, stack3, stack4, stack5, stack6, stack7, stack8, stack9}
-	scanner := utils.NewFileScanner("./5/input.txt")
+	input := utils.OpenInputFile("./5/input_full.txt")
+	split := strings.Split(input, "\n\n")
 
-	// stack1 := &stack{"Z", "N"}
-	// stack2 := &stack{"M", "C", "D"}
-	// stack3 := &stack{"P"}
-	// stacks := []*stack{stack1, stack2, stack3}
-	// scanner := utils.NewFileScanner("./5/sample.txt")
+	crates, instructions := split[0], split[1]
+	instructionsArray := strings.Split(instructions, "\n")
 
-	defer scanner.Close()
-	iter := 1
+	stacks := parseCrates(crates)
 
-	for scanner.Scan() {
-		procedure := scanner.Text()
+	for _, procedure := range instructionsArray {
 
 		instructions := reg.FindStringSubmatch(procedure)
 		quantity, _ := strconv.Atoi(instructions[1])
@@ -118,21 +104,11 @@ func A() string {
 
 			if crate != "" {
 				stacks[to-1].Push(crate)
-			} else {
-				fmt.Println(procedure)
-				fmt.Println(iter)
-
 			}
 		}
 
-		iter++
 	}
 
-	// for i := range stacks {
-	// 	fmt.Println(stacks[i])
-	// }
-
-	fmt.Println()
 	output := ""
 	for _, stk := range stacks {
 		output += stk.Pop()
@@ -140,26 +116,4 @@ func A() string {
 	}
 
 	return output
-}
-
-type stack []string
-
-func (s *stack) Push(in string) {
-	*s = append(*s, in)
-}
-
-func (s *stack) Pop() string {
-	if len(*s) == 0 {
-		return ""
-	}
-
-	// find the last index and get the element there
-	lastIdx := len(*s) - 1
-	elem := (*s)[lastIdx]
-
-	// remove last item from stack
-	*s = (*s)[:lastIdx]
-
-	// return item
-	return elem
 }
