@@ -6,6 +6,9 @@ import (
 	one "github.com/Jaytpa01/advent-of-code-2022/1"
 	two "github.com/Jaytpa01/advent-of-code-2022/2"
 	three "github.com/Jaytpa01/advent-of-code-2022/3"
+	four "github.com/Jaytpa01/advent-of-code-2022/4"
+	five "github.com/Jaytpa01/advent-of-code-2022/5"
+	six "github.com/Jaytpa01/advent-of-code-2022/6"
 )
 
 /*
@@ -31,5 +34,14 @@ func main() {
 
 	fmt.Printf("Answer for Problem 3A: %v\n", three.A())
 	fmt.Printf("Answer for Problem 3B: %v\n", three.B())
+
+	fmt.Printf("Answer for Problem 4A: %v\n", four.A())
+	fmt.Printf("Answer for Problem 4B: %v\n", four.B())
+
+	fmt.Printf("Answer for Problem 5A: %v\n", five.A())
+	fmt.Printf("Answer for Problem 5B: %v\n", five.B())
+
+	fmt.Printf("Answer for Problem 6A: %v\n", six.A())
+	fmt.Printf("Answer for Problem 6B: %v\n", six.B())
 
 }
