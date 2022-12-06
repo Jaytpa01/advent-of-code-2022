@@ -102,9 +102,11 @@ func A() string {
 		for i := 0; i < quantity; i++ {
 			crate := stacks[from-1].Pop()
 
-			if crate != "" {
-				stacks[to-1].Push(crate)
+			if crate == "" {
+				break
 			}
+
+			stacks[to-1].Push(crate)
 		}
 
 	}
