@@ -1,7 +1,6 @@
 package eight
 
 import (
-	"fmt"
 	"strconv"
 
 	"github.com/Jaytpa01/advent-of-code-2022/utils"
@@ -9,7 +8,7 @@ import (
 
 func A() int {
 
-	input := utils.NewFileScanner("./8/sample.txt")
+	input := utils.NewFileScanner("./8/input.txt")
 	defer input.Close()
 
 	treeGrid := [][]int{}
@@ -26,63 +25,52 @@ func A() int {
 		treeGrid = append(treeGrid, treeLine)
 	}
 
-	// for _, trees := range treeGrid {
-	// 	fmt.Println(trees)
-	// }
-	visibleInterior := 0
+	visible := (len(treeGrid) * 2) + ((len(treeGrid[0]) - 2) * 2)
 
 	for i := 1; i < len(treeGrid)-1; i++ {
 		for j := 1; j < len(treeGrid[i])-1; j++ {
 
 			currentTree := treeGrid[i][j]
 
-			fmt.Println(currentTree, i, j)
-
 			rightVisible := true
 			leftVisible := true
 			upVisible := true
 			downVisible := true
 
-			// check right
-			for right := 1; right < len(treeGrid[i])-1; right++ {
-				if treeGrid[i][j+right] >= currentTree {
-					rightVisible = false
-					break
+			for hor := 0; hor < len(treeGrid[i]); hor++ {
+				if hor == j {
+					continue
+				}
+
+				if treeGrid[i][hor] >= currentTree {
+					if hor < j {
+						leftVisible = false
+					} else {
+						rightVisible = false
+					}
 				}
 			}
 
-			// check left
-			for left := j; left >= 0; left-- {
-				if treeGrid[i][j-left] >= currentTree {
-					leftVisible = false
-					break
+			for vert := 0; vert < len(treeGrid); vert++ {
+				if vert == i {
+					continue
 				}
-			}
 
-			// check up
-			for up := i; up >= 0; up-- {
-				if treeGrid[i-up][j] >= currentTree {
-					upVisible = false
-					break
-				}
-			}
-
-			// check down
-			for down := 1; down <= len(treeGrid)-1; down++ {
-				if treeGrid[i+down][j] >= currentTree {
-					downVisible = false
-					break
+				if treeGrid[vert][j] >= currentTree {
+					if vert < i {
+						upVisible = false
+					} else {
+						downVisible = false
+					}
 				}
 			}
 
 			if leftVisible || rightVisible || upVisible || downVisible {
-				visibleInterior++
+				visible++
 			}
 
 		}
 	}
 
-	fmt.Println(visibleInterior)
-
-	return 0
+	return visible
 }
