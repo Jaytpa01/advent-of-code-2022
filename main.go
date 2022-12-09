@@ -3,12 +3,7 @@ package main
 import (
 	"fmt"
 
-	one "github.com/Jaytpa01/advent-of-code-2022/1"
-	two "github.com/Jaytpa01/advent-of-code-2022/2"
-	three "github.com/Jaytpa01/advent-of-code-2022/3"
-	four "github.com/Jaytpa01/advent-of-code-2022/4"
-	five "github.com/Jaytpa01/advent-of-code-2022/5"
-	six "github.com/Jaytpa01/advent-of-code-2022/6"
+	eight "github.com/Jaytpa01/advent-of-code-2022/8"
 )
 
 /*
@@ -26,22 +21,28 @@ Now that you're correctly decrypting the ultra top secret strategy guide, you wo
 Following the Elf's instructions for the second column, what would your total score be if everything goes exactly according to your strategy guide?
 */
 func main() {
-	fmt.Printf("Answer for Problem 1A: %d\n", one.OneA())
-	fmt.Printf("Answer for Problem 1B: %d\n\n", one.OneB())
+	// fmt.Printf("Answer for Problem 1A: %d\n", one.OneA())
+	// fmt.Printf("Answer for Problem 1B: %d\n\n", one.OneB())
 
-	fmt.Printf("Answer for Problem 2A: %d\n", two.A())
-	fmt.Printf("Answer for Problem 2B: %d\n\n", two.B())
+	// fmt.Printf("Answer for Problem 2A: %d\n", two.A())
+	// fmt.Printf("Answer for Problem 2B: %d\n\n", two.B())
 
-	fmt.Printf("Answer for Problem 3A: %v\n", three.A())
-	fmt.Printf("Answer for Problem 3B: %v\n\n", three.B())
+	// fmt.Printf("Answer for Problem 3A: %v\n", three.A())
+	// fmt.Printf("Answer for Problem 3B: %v\n\n", three.B())
 
-	fmt.Printf("Answer for Problem 4A: %v\n", four.A())
-	fmt.Printf("Answer for Problem 4B: %v\n\n", four.B())
+	// fmt.Printf("Answer for Problem 4A: %v\n", four.A())
+	// fmt.Printf("Answer for Problem 4B: %v\n\n", four.B())
 
-	fmt.Printf("Answer for Problem 5A: %v\n", five.A())
-	fmt.Printf("Answer for Problem 5B: %v\n\n", five.B())
+	// fmt.Printf("Answer for Problem 5A: %v\n", five.A())
+	// fmt.Printf("Answer for Problem 5B: %v\n\n", five.B())
 
-	fmt.Printf("Answer for Problem 6A: %v\n", six.A())
-	fmt.Printf("Answer for Problem 6B: %v\n\n", six.B())
+	// fmt.Printf("Answer for Problem 6A: %v\n", six.A())
+	// fmt.Printf("Answer for Problem 6B: %v\n\n", six.B())
+
+	// fmt.Printf("Answer for Problem 7A: %v\n", seven.A())
+	// fmt.Printf("Answer for Problem 7B: %v\n\n", seven.B())
+
+	fmt.Printf("Answer for Problem 8A: %v\n", eight.A())
+	// fmt.Printf("Answer for Problem 8B: %v\n\n", eight.B())
 
 }
