@@ -42,7 +42,7 @@ func main() {
 	// fmt.Printf("Answer for Problem 7A: %v\n", seven.A())
 	// fmt.Printf("Answer for Problem 7B: %v\n\n", seven.B())
 
-	fmt.Printf("Answer for Problem 8A: %v\n", eight.A())
-	// fmt.Printf("Answer for Problem 8B: %v\n\n", eight.B())
+	// fmt.Printf("Answer for Problem 8A: %v\n", eight.A())
+	fmt.Printf("Answer for Problem 8B: %v\n\n", eight.B())
 
 }
