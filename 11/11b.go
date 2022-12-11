@@ -9,7 +9,7 @@ import (
 	"github.com/Jaytpa01/advent-of-code-2022/utils"
 )
 
-func A() int {
+func B() int {
 	// input := utils.OpenInputFile("./11/sample.txt")
 	input := utils.OpenInputFile("./11/input.txt")
 	monkeyInputs := strings.Split(input, "\n\n")
@@ -18,6 +18,8 @@ func A() int {
 	for i := range monkeys {
 		monkeys[i] = &monkey{}
 	}
+
+	mod := 1
 
 	for i, monkeyInput := range monkeyInputs {
 		lines := strings.Split(monkeyInput, "\n")
@@ -44,6 +46,7 @@ func A() int {
 		var test int
 		fmt.Sscanf(lines[3], "Test: divisible by %d", &test)
 		monkeys[i].divisibleBy = test
+		mod *= test
 
 		ifTrue, ifFalse := 0, 0
 		fmt.Sscanf(lines[4], "If true: throw to monkey %d", &ifTrue)
@@ -52,7 +55,7 @@ func A() int {
 		monkeys[i].ifFalse = ifFalse
 	}
 
-	for round := 0; round < 20; round++ {
+	for round := 0; round < 10000; round++ {
 		for _, monkey := range monkeys {
 
 			numOfItems := len(monkey.items)
@@ -62,7 +65,8 @@ func A() int {
 				item := monkey.items.dequeue()
 
 				item = monkey.performOperation(item)
-				item = item / 3
+
+				item %= mod
 
 				if item%monkey.divisibleBy == 0 {
 					monkeys[monkey.ifTrue].items.enqueue(item)
@@ -81,6 +85,8 @@ func A() int {
 		inspections[i] = monkeys[i].inspections
 	}
 	sort.Sort(sort.Reverse(sort.IntSlice(inspections)))
+
+	fmt.Println(inspections)
 
 	return inspections[0] * inspections[1]
 }
