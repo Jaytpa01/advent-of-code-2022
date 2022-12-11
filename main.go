@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	ten "github.com/Jaytpa01/advent-of-code-2022/10"
+	eleven "github.com/Jaytpa01/advent-of-code-2022/11"
 )
 
 /*
@@ -49,5 +49,8 @@ func main() {
 	// fmt.Printf("Answer for Problem 9B: %v\n\n", nine.B())
 
 	// fmt.Printf("Answer for Problem 10A: %v\n", ten.A())
-	fmt.Printf("Answer for Problem 10B:\n%v\n\n", ten.B())
+	// fmt.Printf("Answer for Problem 10B:\n%v\n\n", ten.B())
+
+	fmt.Printf("Answer for Problem 11A: %v\n", eleven.A())
+	// fmt.Printf("Answer for Problem 11B:\n%v\n\n", eleven.B())
 }
